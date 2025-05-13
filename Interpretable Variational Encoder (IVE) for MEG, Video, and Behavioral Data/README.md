@@ -27,7 +27,7 @@ The framework consists of several key components:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/interpretable-variational-encoder.git
+git clone https://github.com/aysha2016/interpretable-variational-encoder.git
 cd interpretable-variational-encoder
 ```
 
@@ -99,28 +99,4 @@ python train.py
 - Learns common representations
 - Enables cross-modal analysis
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{your-paper,
-  title={Interpretable Variational Encoder for Multi-Modal Data Analysis},
-  author={Your Name},
-  journal={Your Journal},
-  year={2024}
-}
-```
-
-## Acknowledgments
-
-- Thanks to all contributors and the open-source community
-- Special thanks to the PyTorch team for their excellent deep learning framework 
+ 
