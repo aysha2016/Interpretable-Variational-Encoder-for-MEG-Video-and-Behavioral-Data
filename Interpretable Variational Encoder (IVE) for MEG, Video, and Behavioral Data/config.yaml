@@ -1,0 +1,38 @@
+# Data configuration
+data:
+  meg_shape: [1, 1, 100, 102]  # [batch, channels, time, sensors]
+  video_shape: [1, 3, 30, 64, 64]  # [batch, channels, time, height, width]
+  behavioral_dim: 10  # Number of behavioral features
+  train_val_split: 0.8  # Training/validation split ratio
+
+# Model configuration
+model:
+  latent_dim: 32  # Dimension of the shared latent space
+  shared_dim: 16  # Dimension of shared features
+  modality_specific_dim: 8  # Dimension of modality-specific features
+  dropout_rate: 0.1  # Dropout rate for regularization
+  base_channels: 32  # Base number of channels for CNNs
+
+# Training configuration
+training:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001  # L2 regularization
+  num_workers: 4  # Number of workers for data loading
+  checkpoint_dir: "checkpoints"  # Directory to save model checkpoints
+  early_stopping_patience: 10  # Number of epochs to wait before early stopping
+  gradient_clip_val: 1.0  # Gradient clipping value
+
+# Logging configuration
+logging:
+  log_dir: "logs"  # Directory to save training logs
+  log_interval: 100  # Number of batches between logging
+  save_interval: 5  # Number of epochs between model saves
+  tensorboard: true  # Whether to use TensorBoard for logging
+
+# Hardware configuration
+hardware:
+  use_gpu: true  # Whether to use GPU for training
+  gpu_ids: [0]  # List of GPU IDs to use
+  mixed_precision: true  # Whether to use mixed precision training 
